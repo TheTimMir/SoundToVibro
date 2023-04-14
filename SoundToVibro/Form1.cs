@@ -72,7 +72,6 @@ namespace SoundToVibro
                     else v.LeftMotorSpeed = (ushort)0;
                     if (cbEnableRight.Checked) v.RightMotorSpeed = (ushort)(pbRight.Value * 1000);
                     else v.RightMotorSpeed = (ushort)0;
-                    tbStatus.Text = "Left: " + v.LeftMotorSpeed + " Right: " + v.RightMotorSpeed;
                     lblRightSoundLevel.Text = v.RightMotorSpeed.ToString();
                     lblLeftSoundLevel.Text = v.LeftMotorSpeed.ToString();
                     controller.SetVibration(v);

@@ -32,7 +32,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pbLeft = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tbStatus = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cbEnableLeft = new System.Windows.Forms.CheckBox();
             this.cbEnableRight = new System.Windows.Forms.CheckBox();
@@ -51,6 +50,7 @@
             this.tbGlobalBoost = new System.Windows.Forms.NumericUpDown();
             this.lblRightSoundLevel = new System.Windows.Forms.Label();
             this.lblLeftSoundLevel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRightMax)).BeginInit();
@@ -80,15 +80,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // tbStatus
-            // 
-            this.tbStatus.AutoSize = true;
-            this.tbStatus.Location = new System.Drawing.Point(247, 13);
-            this.tbStatus.Name = "tbStatus";
-            this.tbStatus.Size = new System.Drawing.Size(35, 13);
-            this.tbStatus.TabIndex = 3;
-            this.tbStatus.Text = "label1";
             // 
             // backgroundWorker1
             // 
@@ -275,11 +266,21 @@
             this.lblLeftSoundLevel.TabIndex = 23;
             this.lblLeftSoundLevel.Text = "0";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Audio source:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 281);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLeftSoundLevel);
             this.Controls.Add(this.lblRightSoundLevel);
             this.Controls.Add(this.tbGlobalBoost);
@@ -297,7 +298,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEnableRight);
             this.Controls.Add(this.cbEnableLeft);
-            this.Controls.Add(this.tbStatus);
             this.Controls.Add(this.pbLeft);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
@@ -319,7 +319,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ProgressBar pbLeft;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label tbStatus;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.CheckBox cbEnableLeft;
         private System.Windows.Forms.CheckBox cbEnableRight;
@@ -338,6 +337,7 @@
         private System.Windows.Forms.NumericUpDown tbGlobalBoost;
         private System.Windows.Forms.Label lblRightSoundLevel;
         private System.Windows.Forms.Label lblLeftSoundLevel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

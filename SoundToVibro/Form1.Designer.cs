@@ -114,7 +114,6 @@
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Global multiplier:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pbRight
             // 
@@ -246,7 +245,6 @@
             0,
             0,
             0});
-            this.tbGlobalBoost.ValueChanged += new System.EventHandler(this.tbGlobalBoost_ValueChanged);
             // 
             // lblRightSoundLevel
             // 

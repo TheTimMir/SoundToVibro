@@ -53,6 +53,10 @@
             this.lblAudioSelTitle = new System.Windows.Forms.Label();
             this.cbGamepadSelection = new System.Windows.Forms.ComboBox();
             this.lblGamepadSelTitle = new System.Windows.Forms.Label();
+            this.lblLeftMin = new System.Windows.Forms.Label();
+            this.lblLeftMax = new System.Windows.Forms.Label();
+            this.lblRightMax = new System.Windows.Forms.Label();
+            this.lblRightMin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRightMax)).BeginInit();
@@ -72,7 +76,8 @@
             // 
             // pbLeft
             // 
-            this.pbLeft.Location = new System.Drawing.Point(12, 145);
+            this.pbLeft.Location = new System.Drawing.Point(12, 153);
+            this.pbLeft.MarqueeAnimationSpeed = 0;
             this.pbLeft.Name = "pbLeft";
             this.pbLeft.Size = new System.Drawing.Size(248, 23);
             this.pbLeft.Step = 100;
@@ -92,7 +97,7 @@
             // cbEnableLeft
             // 
             this.cbEnableLeft.AutoSize = true;
-            this.cbEnableLeft.Location = new System.Drawing.Point(141, 122);
+            this.cbEnableLeft.Location = new System.Drawing.Point(141, 111);
             this.cbEnableLeft.Name = "cbEnableLeft";
             this.cbEnableLeft.Size = new System.Drawing.Size(119, 17);
             this.cbEnableLeft.TabIndex = 5;
@@ -102,7 +107,7 @@
             // cbEnableRight
             // 
             this.cbEnableRight.AutoSize = true;
-            this.cbEnableRight.Location = new System.Drawing.Point(389, 122);
+            this.cbEnableRight.Location = new System.Drawing.Point(389, 111);
             this.cbEnableRight.Name = "cbEnableRight";
             this.cbEnableRight.Size = new System.Drawing.Size(126, 17);
             this.cbEnableRight.TabIndex = 6;
@@ -120,7 +125,8 @@
             // 
             // pbRight
             // 
-            this.pbRight.Location = new System.Drawing.Point(267, 145);
+            this.pbRight.Location = new System.Drawing.Point(267, 153);
+            this.pbRight.MarqueeAnimationSpeed = 0;
             this.pbRight.Name = "pbRight";
             this.pbRight.Size = new System.Drawing.Size(248, 23);
             this.pbRight.Step = 100;
@@ -130,7 +136,7 @@
             // 
             this.lblLeftMotorTitle.AutoSize = true;
             this.lblLeftMotorTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblLeftMotorTitle.Location = new System.Drawing.Point(100, 75);
+            this.lblLeftMotorTitle.Location = new System.Drawing.Point(100, 64);
             this.lblLeftMotorTitle.Name = "lblLeftMotorTitle";
             this.lblLeftMotorTitle.Size = new System.Drawing.Size(39, 42);
             this.lblLeftMotorTitle.TabIndex = 9;
@@ -140,7 +146,7 @@
             // 
             this.lblRightMotorTitle.AutoSize = true;
             this.lblRightMotorTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblRightMotorTitle.Location = new System.Drawing.Point(375, 75);
+            this.lblRightMotorTitle.Location = new System.Drawing.Point(375, 64);
             this.lblRightMotorTitle.Name = "lblRightMotorTitle";
             this.lblRightMotorTitle.Size = new System.Drawing.Size(45, 42);
             this.lblRightMotorTitle.TabIndex = 10;
@@ -148,7 +154,8 @@
             // 
             // tbLeftMin
             // 
-            this.tbLeftMin.Location = new System.Drawing.Point(12, 175);
+            this.tbLeftMin.Location = new System.Drawing.Point(12, 183);
+            this.tbLeftMin.Maximum = 50;
             this.tbLeftMin.Name = "tbLeftMin";
             this.tbLeftMin.Size = new System.Drawing.Size(248, 45);
             this.tbLeftMin.TabIndex = 11;
@@ -156,25 +163,28 @@
             // 
             // tbLeftMax
             // 
-            this.tbLeftMax.Location = new System.Drawing.Point(12, 224);
+            this.tbLeftMax.Location = new System.Drawing.Point(12, 232);
+            this.tbLeftMax.Maximum = 50;
             this.tbLeftMax.Name = "tbLeftMax";
             this.tbLeftMax.Size = new System.Drawing.Size(248, 45);
             this.tbLeftMax.TabIndex = 12;
             this.tbLeftMax.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.tbLeftMax.Value = 10;
+            this.tbLeftMax.Value = 50;
             // 
             // tbRightMax
             // 
-            this.tbRightMax.Location = new System.Drawing.Point(266, 224);
+            this.tbRightMax.Location = new System.Drawing.Point(266, 232);
+            this.tbRightMax.Maximum = 50;
             this.tbRightMax.Name = "tbRightMax";
             this.tbRightMax.Size = new System.Drawing.Size(248, 45);
             this.tbRightMax.TabIndex = 14;
             this.tbRightMax.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.tbRightMax.Value = 10;
+            this.tbRightMax.Value = 50;
             // 
             // tbRightMin
             // 
-            this.tbRightMin.Location = new System.Drawing.Point(266, 175);
+            this.tbRightMin.Location = new System.Drawing.Point(266, 183);
+            this.tbRightMin.Maximum = 50;
             this.tbRightMin.Name = "tbRightMin";
             this.tbRightMin.Size = new System.Drawing.Size(248, 45);
             this.tbRightMin.TabIndex = 13;
@@ -183,7 +193,7 @@
             // lblLeftMultDesc
             // 
             this.lblLeftMultDesc.AutoSize = true;
-            this.lblLeftMultDesc.Location = new System.Drawing.Point(12, 123);
+            this.lblLeftMultDesc.Location = new System.Drawing.Point(12, 112);
             this.lblLeftMultDesc.Name = "lblLeftMultDesc";
             this.lblLeftMultDesc.Size = new System.Drawing.Size(59, 13);
             this.lblLeftMultDesc.TabIndex = 16;
@@ -192,7 +202,7 @@
             // lblRightMultDesc
             // 
             this.lblRightMultDesc.AutoSize = true;
-            this.lblRightMultDesc.Location = new System.Drawing.Point(266, 123);
+            this.lblRightMultDesc.Location = new System.Drawing.Point(266, 112);
             this.lblRightMultDesc.Name = "lblRightMultDesc";
             this.lblRightMultDesc.Size = new System.Drawing.Size(61, 13);
             this.lblRightMultDesc.TabIndex = 18;
@@ -200,7 +210,7 @@
             // 
             // tbRightBoost
             // 
-            this.tbRightBoost.Location = new System.Drawing.Point(333, 121);
+            this.tbRightBoost.Location = new System.Drawing.Point(333, 110);
             this.tbRightBoost.Minimum = new decimal(new int[] {
             1,
             0,
@@ -217,7 +227,7 @@
             // 
             // tbLeftBoost
             // 
-            this.tbLeftBoost.Location = new System.Drawing.Point(77, 121);
+            this.tbLeftBoost.Location = new System.Drawing.Point(77, 110);
             this.tbLeftBoost.Minimum = new decimal(new int[] {
             1,
             0,
@@ -234,7 +244,13 @@
             // 
             // tbGlobalBoost
             // 
+            this.tbGlobalBoost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbGlobalBoost.Location = new System.Drawing.Point(150, 48);
+            this.tbGlobalBoost.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.tbGlobalBoost.Minimum = new decimal(new int[] {
             1,
             0,
@@ -253,21 +269,21 @@
             // 
             this.lblRightSoundLevel.AutoSize = true;
             this.lblRightSoundLevel.BackColor = System.Drawing.Color.Transparent;
-            this.lblRightSoundLevel.Location = new System.Drawing.Point(380, 150);
+            this.lblRightSoundLevel.Location = new System.Drawing.Point(367, 137);
             this.lblRightSoundLevel.Name = "lblRightSoundLevel";
-            this.lblRightSoundLevel.Size = new System.Drawing.Size(13, 13);
+            this.lblRightSoundLevel.Size = new System.Drawing.Size(53, 13);
             this.lblRightSoundLevel.TabIndex = 22;
-            this.lblRightSoundLevel.Text = "0";
+            this.lblRightSoundLevel.Text = "Current: 0";
             // 
             // lblLeftSoundLevel
             // 
             this.lblLeftSoundLevel.AutoSize = true;
             this.lblLeftSoundLevel.BackColor = System.Drawing.Color.Transparent;
-            this.lblLeftSoundLevel.Location = new System.Drawing.Point(125, 150);
+            this.lblLeftSoundLevel.Location = new System.Drawing.Point(104, 137);
             this.lblLeftSoundLevel.Name = "lblLeftSoundLevel";
-            this.lblLeftSoundLevel.Size = new System.Drawing.Size(13, 13);
+            this.lblLeftSoundLevel.Size = new System.Drawing.Size(53, 13);
             this.lblLeftSoundLevel.TabIndex = 23;
-            this.lblLeftSoundLevel.Text = "0";
+            this.lblLeftSoundLevel.Text = "Current: 0";
             // 
             // lblAudioSelTitle
             // 
@@ -295,11 +311,51 @@
             this.lblGamepadSelTitle.TabIndex = 26;
             this.lblGamepadSelTitle.Text = "Gamepad (out):";
             // 
+            // lblLeftMin
+            // 
+            this.lblLeftMin.AutoSize = true;
+            this.lblLeftMin.Location = new System.Drawing.Point(12, 137);
+            this.lblLeftMin.Name = "lblLeftMin";
+            this.lblLeftMin.Size = new System.Drawing.Size(54, 13);
+            this.lblLeftMin.TabIndex = 27;
+            this.lblLeftMin.Text = "Minimal: 0";
+            // 
+            // lblLeftMax
+            // 
+            this.lblLeftMax.AutoSize = true;
+            this.lblLeftMax.Location = new System.Drawing.Point(191, 137);
+            this.lblLeftMax.Name = "lblLeftMax";
+            this.lblLeftMax.Size = new System.Drawing.Size(69, 13);
+            this.lblLeftMax.TabIndex = 28;
+            this.lblLeftMax.Text = "Maximal: 100";
+            // 
+            // lblRightMax
+            // 
+            this.lblRightMax.AutoSize = true;
+            this.lblRightMax.Location = new System.Drawing.Point(446, 137);
+            this.lblRightMax.Name = "lblRightMax";
+            this.lblRightMax.Size = new System.Drawing.Size(69, 13);
+            this.lblRightMax.TabIndex = 30;
+            this.lblRightMax.Text = "Maximal: 100";
+            // 
+            // lblRightMin
+            // 
+            this.lblRightMin.AutoSize = true;
+            this.lblRightMin.Location = new System.Drawing.Point(267, 137);
+            this.lblRightMin.Name = "lblRightMin";
+            this.lblRightMin.Size = new System.Drawing.Size(54, 13);
+            this.lblRightMin.TabIndex = 29;
+            this.lblRightMin.Text = "Minimal: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 281);
+            this.Controls.Add(this.lblRightMax);
+            this.Controls.Add(this.lblRightMin);
+            this.Controls.Add(this.lblLeftMax);
+            this.Controls.Add(this.lblLeftMin);
             this.Controls.Add(this.lblGamepadSelTitle);
             this.Controls.Add(this.cbGamepadSelection);
             this.Controls.Add(this.lblAudioSelTitle);
@@ -322,6 +378,8 @@
             this.Controls.Add(this.cbEnableLeft);
             this.Controls.Add(this.pbLeft);
             this.Controls.Add(this.cbAudioSelection);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Sound To Vibro V0.2";
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).EndInit();
@@ -362,6 +420,10 @@
         private System.Windows.Forms.Label lblAudioSelTitle;
         private System.Windows.Forms.ComboBox cbGamepadSelection;
         private System.Windows.Forms.Label lblGamepadSelTitle;
+        private System.Windows.Forms.Label lblLeftMin;
+        private System.Windows.Forms.Label lblLeftMax;
+        private System.Windows.Forms.Label lblRightMax;
+        private System.Windows.Forms.Label lblRightMin;
     }
 }
 

@@ -16,15 +16,11 @@ namespace SoundToVibro
         Controller controller = null;
         decimal preSplitBoosted = 0;
         List<Controller> controllers = new List<Controller>();
-        private static int Map(int value, int fromLow, int fromHigh, int toLow, int toHigh)
+        private static int CropValue(decimal value, decimal cropMin, decimal cropMax)
         {
-            return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
-        }
-        private static int CropAndScaleValue(int value, int cropMin, int cropMax, int min, int max)
-        {
-            if (value < cropMin) value = cropMin;
-            if (value > cropMax) value = cropMax;
-            return Map(value, min, max, cropMin, cropMax);
+            if (value < cropMin) return 0; 
+            if( value < cropMax) return (int)value;
+            else return 0;
         }
         public Form1()
         {
@@ -35,21 +31,28 @@ namespace SoundToVibro
             var devices = en.EnumerateAudioEndPoints(DataFlow.All, DeviceState.Active);
             cbAudioSelection.Items.AddRange(devices.ToArray());
             timer1.Start();
-
             backgroundWorker1.RunWorkerAsync();
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            decimal preCropLeft = 0;
+            decimal preCropRight = 0;
             if (cbAudioSelection.SelectedItem != null)
             {
                 var device = (MMDevice)cbAudioSelection.SelectedItem;
-                preSplitBoosted = (decimal)(device.AudioMeterInformation.MasterPeakValue * double.Parse(tbGlobalBoost.Text));
-                pbLeft.Value = CropAndScaleValue((int)(preSplitBoosted * tbLeftBoost.Value), tbLeftMin.Value * 10, tbLeftMax.Value * 10, 0, 100);
-                pbRight.Value = CropAndScaleValue((int)(preSplitBoosted * tbRightBoost.Value), tbRightMin.Value * 10, tbRightMax.Value * 10, 0, 100);
+                preSplitBoosted = (decimal)(device.AudioMeterInformation.MasterPeakValue * double.Parse(tbGlobalBoost.Text)*10);
+                preCropLeft = (preSplitBoosted * tbLeftBoost.Value);
+                preCropRight = (preSplitBoosted * tbRightBoost.Value);
             }
-
+            pbLeft.Value = CropValue(preCropLeft, tbLeftMin.Value * 2, tbLeftMax.Value * 2);
+            pbRight.Value = CropValue(preCropRight, tbRightMin.Value * 2, tbRightMax.Value * 2);
+            lblLeftSoundLevel.Text = $"Current: {(int)preCropLeft}";
+            lblRightSoundLevel.Text = $"Current: {(int)preCropRight}";
+            lblLeftMin.Text = $"Minimal:{tbLeftMin.Value*2}";
+            lblRightMin.Text = $"Minimal:{tbRightMin.Value*2}";
+            lblLeftMax.Text = $"Maximal:{tbLeftMax.Value * 2}";
+            lblRightMax.Text = $"Maximal:{tbRightMax.Value * 2}";
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -86,12 +89,10 @@ namespace SoundToVibro
                         controller = controllers[cbGamepadSelection.SelectedIndex];
                     }
                     var state = controller.GetState();
-                    if (cbEnableLeft.Checked) currVibr.LeftMotorSpeed = (ushort)(pbLeft.Value * 1000);
+                    if (cbEnableLeft.Checked) currVibr.LeftMotorSpeed = (ushort)(pbLeft.Value*655.35);
                     else currVibr.LeftMotorSpeed = (ushort)0;
-                    if (cbEnableRight.Checked) currVibr.RightMotorSpeed = (ushort)(pbRight.Value * 1000);
+                    if (cbEnableRight.Checked) currVibr.RightMotorSpeed = (ushort)(pbRight.Value*655.35);
                     else currVibr.RightMotorSpeed = (ushort)0;
-                    lblRightSoundLevel.Text = currVibr.RightMotorSpeed.ToString();
-                    lblLeftSoundLevel.Text = currVibr.LeftMotorSpeed.ToString();
                     controller.SetVibration(currVibr);
                     Thread.Sleep(10);
                     previousState = state;

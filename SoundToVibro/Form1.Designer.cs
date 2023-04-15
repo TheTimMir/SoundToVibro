@@ -51,6 +51,8 @@
             this.lblRightSoundLevel = new System.Windows.Forms.Label();
             this.lblLeftSoundLevel = new System.Windows.Forms.Label();
             this.lblAudioSelTitle = new System.Windows.Forms.Label();
+            this.cbGamepadSelection = new System.Windows.Forms.ComboBox();
+            this.lblGamepadSelTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRightMax)).BeginInit();
@@ -79,6 +81,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // backgroundWorker1
@@ -269,17 +272,36 @@
             // lblAudioSelTitle
             // 
             this.lblAudioSelTitle.AutoSize = true;
-            this.lblAudioSelTitle.Location = new System.Drawing.Point(93, 10);
+            this.lblAudioSelTitle.Location = new System.Drawing.Point(74, 9);
             this.lblAudioSelTitle.Name = "lblAudioSelTitle";
-            this.lblAudioSelTitle.Size = new System.Drawing.Size(72, 13);
+            this.lblAudioSelTitle.Size = new System.Drawing.Size(89, 13);
             this.lblAudioSelTitle.TabIndex = 24;
-            this.lblAudioSelTitle.Text = "Audio source:";
+            this.lblAudioSelTitle.Text = "Audio source (in):";
+            // 
+            // cbGamepadSelection
+            // 
+            this.cbGamepadSelection.FormattingEnabled = true;
+            this.cbGamepadSelection.Location = new System.Drawing.Point(269, 26);
+            this.cbGamepadSelection.Name = "cbGamepadSelection";
+            this.cbGamepadSelection.Size = new System.Drawing.Size(248, 21);
+            this.cbGamepadSelection.TabIndex = 25;
+            // 
+            // lblGamepadSelTitle
+            // 
+            this.lblGamepadSelTitle.AutoSize = true;
+            this.lblGamepadSelTitle.Location = new System.Drawing.Point(353, 9);
+            this.lblGamepadSelTitle.Name = "lblGamepadSelTitle";
+            this.lblGamepadSelTitle.Size = new System.Drawing.Size(80, 13);
+            this.lblGamepadSelTitle.TabIndex = 26;
+            this.lblGamepadSelTitle.Text = "Gamepad (out):";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 281);
+            this.Controls.Add(this.lblGamepadSelTitle);
+            this.Controls.Add(this.cbGamepadSelection);
             this.Controls.Add(this.lblAudioSelTitle);
             this.Controls.Add(this.lblLeftSoundLevel);
             this.Controls.Add(this.lblRightSoundLevel);
@@ -301,7 +323,7 @@
             this.Controls.Add(this.pbLeft);
             this.Controls.Add(this.cbAudioSelection);
             this.Name = "Form1";
-            this.Text = "Sound To Vibro V0.1";
+            this.Text = "Sound To Vibro V0.2";
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRightMax)).EndInit();
@@ -338,6 +360,8 @@
         private System.Windows.Forms.Label lblRightSoundLevel;
         private System.Windows.Forms.Label lblLeftSoundLevel;
         private System.Windows.Forms.Label lblAudioSelTitle;
+        private System.Windows.Forms.ComboBox cbGamepadSelection;
+        private System.Windows.Forms.Label lblGamepadSelTitle;
     }
 }
 

@@ -11,7 +11,7 @@ namespace SoundToVibro
     public partial class Form1 : Form
     {
         decimal preSplitBoosted=0;
-        private static int map(int value, int fromLow, int fromHigh, int toLow, int toHigh)
+        private static int Map(int value, int fromLow, int fromHigh, int toLow, int toHigh)
         {
             return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
         }
@@ -19,7 +19,7 @@ namespace SoundToVibro
         {
             if (value < cropMin) value = cropMin;
             if (value > cropMax) value = cropMax;
-            return map(value,min,max,cropMin,cropMax);
+            return Map(value,min,max,cropMin,cropMax);
         }
         public Form1()
         {

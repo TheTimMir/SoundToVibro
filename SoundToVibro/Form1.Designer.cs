@@ -127,7 +127,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(89, 77);
+            this.label3.Location = new System.Drawing.Point(100, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 42);
             this.label3.TabIndex = 9;
@@ -137,7 +137,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(382, 77);
+            this.label4.Location = new System.Drawing.Point(375, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 42);
             this.label4.TabIndex = 10;
@@ -250,7 +250,7 @@
             // 
             this.lblRightSoundLevel.AutoSize = true;
             this.lblRightSoundLevel.BackColor = System.Drawing.Color.Transparent;
-            this.lblRightSoundLevel.Location = new System.Drawing.Point(370, 150);
+            this.lblRightSoundLevel.Location = new System.Drawing.Point(380, 150);
             this.lblRightSoundLevel.Name = "lblRightSoundLevel";
             this.lblRightSoundLevel.Size = new System.Drawing.Size(13, 13);
             this.lblRightSoundLevel.TabIndex = 22;

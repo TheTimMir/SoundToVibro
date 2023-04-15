@@ -63,7 +63,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 45);
+            this.comboBox1.Location = new System.Drawing.Point(12, 26);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(248, 21);
             this.comboBox1.TabIndex = 0;
@@ -109,11 +109,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(292, 48);
+            this.label2.Location = new System.Drawing.Point(65, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Global multiplier:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pbRight
             // 
@@ -204,7 +205,7 @@
             0,
             0});
             this.tbRightBoost.Name = "tbRightBoost";
-            this.tbRightBoost.Size = new System.Drawing.Size(37, 20);
+            this.tbRightBoost.Size = new System.Drawing.Size(40, 20);
             this.tbRightBoost.TabIndex = 19;
             this.tbRightBoost.Value = new decimal(new int[] {
             1,
@@ -221,7 +222,7 @@
             0,
             0});
             this.tbLeftBoost.Name = "tbLeftBoost";
-            this.tbLeftBoost.Size = new System.Drawing.Size(37, 20);
+            this.tbLeftBoost.Size = new System.Drawing.Size(40, 20);
             this.tbLeftBoost.TabIndex = 20;
             this.tbLeftBoost.Value = new decimal(new int[] {
             1,
@@ -231,20 +232,21 @@
             // 
             // tbGlobalBoost
             // 
-            this.tbGlobalBoost.Location = new System.Drawing.Point(381, 46);
+            this.tbGlobalBoost.Location = new System.Drawing.Point(150, 48);
             this.tbGlobalBoost.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.tbGlobalBoost.Name = "tbGlobalBoost";
-            this.tbGlobalBoost.Size = new System.Drawing.Size(37, 20);
+            this.tbGlobalBoost.Size = new System.Drawing.Size(40, 20);
             this.tbGlobalBoost.TabIndex = 21;
             this.tbGlobalBoost.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.tbGlobalBoost.ValueChanged += new System.EventHandler(this.tbGlobalBoost_ValueChanged);
             // 
             // lblRightSoundLevel
             // 
@@ -269,7 +271,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 29);
+            this.label1.Location = new System.Drawing.Point(93, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 24;

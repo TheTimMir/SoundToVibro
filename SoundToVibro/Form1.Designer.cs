@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbAudioSelection = new System.Windows.Forms.ComboBox();
             this.pbLeft = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.cbEnableLeft = new System.Windows.Forms.CheckBox();
             this.cbEnableRight = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblGlobMultDesc = new System.Windows.Forms.Label();
             this.pbRight = new System.Windows.Forms.ProgressBar();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblLeftMotorTitle = new System.Windows.Forms.Label();
+            this.lblRightMotorTitle = new System.Windows.Forms.Label();
             this.tbLeftMin = new System.Windows.Forms.TrackBar();
             this.tbLeftMax = new System.Windows.Forms.TrackBar();
             this.tbRightMax = new System.Windows.Forms.TrackBar();
             this.tbRightMin = new System.Windows.Forms.TrackBar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblLeftMultDesc = new System.Windows.Forms.Label();
+            this.lblRightMultDesc = new System.Windows.Forms.Label();
             this.tbRightBoost = new System.Windows.Forms.NumericUpDown();
             this.tbLeftBoost = new System.Windows.Forms.NumericUpDown();
             this.tbGlobalBoost = new System.Windows.Forms.NumericUpDown();
             this.lblRightSoundLevel = new System.Windows.Forms.Label();
             this.lblLeftSoundLevel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAudioSelTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRightMax)).BeginInit();
@@ -60,13 +60,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbGlobalBoost)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbAudioSelection
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(248, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbAudioSelection.FormattingEnabled = true;
+            this.cbAudioSelection.Location = new System.Drawing.Point(12, 26);
+            this.cbAudioSelection.Name = "cbAudioSelection";
+            this.cbAudioSelection.Size = new System.Drawing.Size(248, 21);
+            this.cbAudioSelection.TabIndex = 0;
             // 
             // pbLeft
             // 
@@ -106,14 +106,14 @@
             this.cbEnableRight.Text = "Enable Right Vibrator";
             this.cbEnableRight.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblGlobMultDesc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Global multiplier:";
+            this.lblGlobMultDesc.AutoSize = true;
+            this.lblGlobMultDesc.Location = new System.Drawing.Point(65, 50);
+            this.lblGlobMultDesc.Name = "lblGlobMultDesc";
+            this.lblGlobMultDesc.Size = new System.Drawing.Size(83, 13);
+            this.lblGlobMultDesc.TabIndex = 7;
+            this.lblGlobMultDesc.Text = "Global multiplier:";
             // 
             // pbRight
             // 
@@ -123,25 +123,25 @@
             this.pbRight.Step = 100;
             this.pbRight.TabIndex = 8;
             // 
-            // label3
+            // lblLeftMotorTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(100, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 42);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "L";
+            this.lblLeftMotorTitle.AutoSize = true;
+            this.lblLeftMotorTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblLeftMotorTitle.Location = new System.Drawing.Point(100, 75);
+            this.lblLeftMotorTitle.Name = "lblLeftMotorTitle";
+            this.lblLeftMotorTitle.Size = new System.Drawing.Size(39, 42);
+            this.lblLeftMotorTitle.TabIndex = 9;
+            this.lblLeftMotorTitle.Text = "L";
             // 
-            // label4
+            // lblRightMotorTitle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(375, 75);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 42);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "R";
+            this.lblRightMotorTitle.AutoSize = true;
+            this.lblRightMotorTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblRightMotorTitle.Location = new System.Drawing.Point(375, 75);
+            this.lblRightMotorTitle.Name = "lblRightMotorTitle";
+            this.lblRightMotorTitle.Size = new System.Drawing.Size(45, 42);
+            this.lblRightMotorTitle.TabIndex = 10;
+            this.lblRightMotorTitle.Text = "R";
             // 
             // tbLeftMin
             // 
@@ -177,23 +177,23 @@
             this.tbRightMin.TabIndex = 13;
             this.tbRightMin.TickStyle = System.Windows.Forms.TickStyle.Both;
             // 
-            // label5
+            // lblLeftMultDesc
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "L multiplier:";
+            this.lblLeftMultDesc.AutoSize = true;
+            this.lblLeftMultDesc.Location = new System.Drawing.Point(12, 123);
+            this.lblLeftMultDesc.Name = "lblLeftMultDesc";
+            this.lblLeftMultDesc.Size = new System.Drawing.Size(59, 13);
+            this.lblLeftMultDesc.TabIndex = 16;
+            this.lblLeftMultDesc.Text = "L multiplier:";
             // 
-            // label6
+            // lblRightMultDesc
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(266, 123);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "R multiplier:";
+            this.lblRightMultDesc.AutoSize = true;
+            this.lblRightMultDesc.Location = new System.Drawing.Point(266, 123);
+            this.lblRightMultDesc.Name = "lblRightMultDesc";
+            this.lblRightMultDesc.Size = new System.Drawing.Size(61, 13);
+            this.lblRightMultDesc.TabIndex = 18;
+            this.lblRightMultDesc.Text = "R multiplier:";
             // 
             // tbRightBoost
             // 
@@ -266,40 +266,40 @@
             this.lblLeftSoundLevel.TabIndex = 23;
             this.lblLeftSoundLevel.Text = "0";
             // 
-            // label1
+            // lblAudioSelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Audio source:";
+            this.lblAudioSelTitle.AutoSize = true;
+            this.lblAudioSelTitle.Location = new System.Drawing.Point(93, 10);
+            this.lblAudioSelTitle.Name = "lblAudioSelTitle";
+            this.lblAudioSelTitle.Size = new System.Drawing.Size(72, 13);
+            this.lblAudioSelTitle.TabIndex = 24;
+            this.lblAudioSelTitle.Text = "Audio source:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 281);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAudioSelTitle);
             this.Controls.Add(this.lblLeftSoundLevel);
             this.Controls.Add(this.lblRightSoundLevel);
             this.Controls.Add(this.tbGlobalBoost);
             this.Controls.Add(this.tbLeftBoost);
             this.Controls.Add(this.tbRightBoost);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblRightMultDesc);
+            this.Controls.Add(this.lblLeftMultDesc);
             this.Controls.Add(this.tbRightMax);
             this.Controls.Add(this.tbRightMin);
             this.Controls.Add(this.tbLeftMax);
             this.Controls.Add(this.tbLeftMin);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblRightMotorTitle);
+            this.Controls.Add(this.lblLeftMotorTitle);
             this.Controls.Add(this.pbRight);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblGlobMultDesc);
             this.Controls.Add(this.cbEnableRight);
             this.Controls.Add(this.cbEnableLeft);
             this.Controls.Add(this.pbLeft);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbAudioSelection);
             this.Name = "Form1";
             this.Text = "Sound To Vibro V0.1";
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).EndInit();
@@ -316,28 +316,28 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbAudioSelection;
         private System.Windows.Forms.ProgressBar pbLeft;
         private System.Windows.Forms.Timer timer1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.CheckBox cbEnableLeft;
         private System.Windows.Forms.CheckBox cbEnableRight;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblGlobMultDesc;
         private System.Windows.Forms.ProgressBar pbRight;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblLeftMotorTitle;
+        private System.Windows.Forms.Label lblRightMotorTitle;
         private System.Windows.Forms.TrackBar tbLeftMin;
         private System.Windows.Forms.TrackBar tbLeftMax;
         private System.Windows.Forms.TrackBar tbRightMax;
         private System.Windows.Forms.TrackBar tbRightMin;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblLeftMultDesc;
+        private System.Windows.Forms.Label lblRightMultDesc;
         private System.Windows.Forms.NumericUpDown tbRightBoost;
         private System.Windows.Forms.NumericUpDown tbLeftBoost;
         private System.Windows.Forms.NumericUpDown tbGlobalBoost;
         private System.Windows.Forms.Label lblRightSoundLevel;
         private System.Windows.Forms.Label lblLeftSoundLevel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAudioSelTitle;
     }
 }
 

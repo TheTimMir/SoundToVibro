@@ -26,16 +26,16 @@ namespace SoundToVibro
             InitializeComponent();
             MMDeviceEnumerator en = new MMDeviceEnumerator();
             var devices = en.EnumerateAudioEndPoints(DataFlow.All, DeviceState.Active);
-            comboBox1.Items.AddRange(devices.ToArray());
+            cbAudioSelection.Items.AddRange(devices.ToArray());
             timer1.Start();
             backgroundWorker1.RunWorkerAsync();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem != null)
+            if (cbAudioSelection.SelectedItem != null)
             {
-                var device = (MMDevice)comboBox1.SelectedItem;
+                var device = (MMDevice)cbAudioSelection.SelectedItem;
                 preSplitBoosted = (decimal)(device.AudioMeterInformation.MasterPeakValue * double.Parse(tbGlobalBoost.Text));
                     pbLeft.Value = CropAndScaleValue((int)(preSplitBoosted * tbLeftBoost.Value),tbLeftMin.Value*10, tbLeftMax.Value*10,0,100);
                     pbRight.Value = CropAndScaleValue((int)(preSplitBoosted * tbRightBoost.Value), tbRightMin.Value * 10, tbRightMax.Value * 10, 0, 100);

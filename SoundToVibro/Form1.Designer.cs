@@ -100,7 +100,7 @@
             this.cbEnableLeft.Location = new System.Drawing.Point(141, 111);
             this.cbEnableLeft.Name = "cbEnableLeft";
             this.cbEnableLeft.Size = new System.Drawing.Size(119, 17);
-            this.cbEnableLeft.TabIndex = 5;
+            this.cbEnableLeft.TabIndex = 4;
             this.cbEnableLeft.Text = "Enable Left Vibrator";
             this.cbEnableLeft.UseVisualStyleBackColor = true;
             // 
@@ -158,8 +158,9 @@
             this.tbLeftMin.Maximum = 50;
             this.tbLeftMin.Name = "tbLeftMin";
             this.tbLeftMin.Size = new System.Drawing.Size(248, 45);
-            this.tbLeftMin.TabIndex = 11;
+            this.tbLeftMin.TabIndex = 7;
             this.tbLeftMin.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.tbLeftMin.Scroll += new System.EventHandler(this.onAnyCropTrackBarScroll);
             // 
             // tbLeftMax
             // 
@@ -167,9 +168,10 @@
             this.tbLeftMax.Maximum = 50;
             this.tbLeftMax.Name = "tbLeftMax";
             this.tbLeftMax.Size = new System.Drawing.Size(248, 45);
-            this.tbLeftMax.TabIndex = 12;
+            this.tbLeftMax.TabIndex = 8;
             this.tbLeftMax.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.tbLeftMax.Value = 50;
+            this.tbLeftMax.Scroll += new System.EventHandler(this.onAnyCropTrackBarScroll);
             // 
             // tbRightMax
             // 
@@ -177,9 +179,10 @@
             this.tbRightMax.Maximum = 50;
             this.tbRightMax.Name = "tbRightMax";
             this.tbRightMax.Size = new System.Drawing.Size(248, 45);
-            this.tbRightMax.TabIndex = 14;
+            this.tbRightMax.TabIndex = 10;
             this.tbRightMax.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.tbRightMax.Value = 50;
+            this.tbRightMax.Scroll += new System.EventHandler(this.onAnyCropTrackBarScroll);
             // 
             // tbRightMin
             // 
@@ -187,8 +190,9 @@
             this.tbRightMin.Maximum = 50;
             this.tbRightMin.Name = "tbRightMin";
             this.tbRightMin.Size = new System.Drawing.Size(248, 45);
-            this.tbRightMin.TabIndex = 13;
+            this.tbRightMin.TabIndex = 9;
             this.tbRightMin.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.tbRightMin.Scroll += new System.EventHandler(this.onAnyCropTrackBarScroll);
             // 
             // lblLeftMultDesc
             // 
@@ -218,7 +222,7 @@
             0});
             this.tbRightBoost.Name = "tbRightBoost";
             this.tbRightBoost.Size = new System.Drawing.Size(40, 20);
-            this.tbRightBoost.TabIndex = 19;
+            this.tbRightBoost.TabIndex = 5;
             this.tbRightBoost.Value = new decimal(new int[] {
             1,
             0,
@@ -235,7 +239,7 @@
             0});
             this.tbLeftBoost.Name = "tbLeftBoost";
             this.tbLeftBoost.Size = new System.Drawing.Size(40, 20);
-            this.tbLeftBoost.TabIndex = 20;
+            this.tbLeftBoost.TabIndex = 3;
             this.tbLeftBoost.Value = new decimal(new int[] {
             1,
             0,
@@ -258,7 +262,7 @@
             0});
             this.tbGlobalBoost.Name = "tbGlobalBoost";
             this.tbGlobalBoost.Size = new System.Drawing.Size(40, 20);
-            this.tbGlobalBoost.TabIndex = 21;
+            this.tbGlobalBoost.TabIndex = 2;
             this.tbGlobalBoost.Value = new decimal(new int[] {
             1,
             0,
@@ -300,7 +304,7 @@
             this.cbGamepadSelection.Location = new System.Drawing.Point(269, 26);
             this.cbGamepadSelection.Name = "cbGamepadSelection";
             this.cbGamepadSelection.Size = new System.Drawing.Size(248, 21);
-            this.cbGamepadSelection.TabIndex = 25;
+            this.cbGamepadSelection.TabIndex = 1;
             // 
             // lblGamepadSelTitle
             // 
@@ -381,7 +385,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Sound To Vibro V0.2";
+            this.Text = "Sound To Vibro V0.3";
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbLeftMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbRightMax)).EndInit();
